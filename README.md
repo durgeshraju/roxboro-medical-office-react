@@ -55,4 +55,4 @@ A comprehensive medical office leasing platform featuring property listings, int
 
 ## 📂 Project Architecture
 
-Can if in the source code
+Available in the source code
