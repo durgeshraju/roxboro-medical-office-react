@@ -1,0 +1,69 @@
+/* ===== RESET STYLES ===== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove link underlines and inherit color */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Set consistent list style */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Make images and media responsive */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Reset heading styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* Normalize form elements without removing affordances */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* Ensure buttons and inputs are clickable */
+button,
+[type="button"],
+[type="submit"],
+[type="reset"] {
+  cursor: pointer;
+}
+
+/* Respect user prefers-reduced-motion setting */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
