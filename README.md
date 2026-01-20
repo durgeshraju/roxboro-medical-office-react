@@ -1,58 +1,16 @@
-# roxboro-medical-office-react
-Modern React application for Roxboro Medical Office - A professional medical office leasing platform featuring property listings, tour scheduling, and contact management. Built with React, React Router, and CSS Modules following enterprise-level architecture patterns.
+# React + Vite
 
- **Note:** This is an educational portfolio project built from scratch to demonstrate React development skills and modern frontend architecture. Not affiliated with any official medical office.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
- ## 🎯 Project Overview
+Currently, two official plugins are available:
 
-A comprehensive medical office leasing platform featuring property listings, interactive tour scheduling, detailed property information, and contact management. Built with React to showcase modern web development practices and clean architecture principles.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-### Live Demo
-🚧 *Coming Soon* - Currently in development
+## React Compiler
 
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## ✨ Features
+## Expanding the ESLint configuration
 
-### Current Features
-- ✅ Responsive navigation header
-- ✅ Hero section with background imagery
-- ✅ Reusable component library (Button, Input, Card)
-- ✅ CSS Modules for scoped styling
-- ✅ Clean folder structure
-
-
-### Planned Features
-- 🔄 Interactive tour booking form with validation
-- 🔄 Property details page with image gallery
-- 🔄 FAQ accordion component
-- 🔄 Contact form with email integration
-- 🔄 Multi-page routing with React Router
-- 🔄 Proximity/location map integration
-- 🔄 Responsive mobile design
-- 🔄 Loading states and error handling
-- 🔄 Form validation and user feedback
-- 🔄 Custom React hooks for reusable logic
-
-## 🛠️ Tech Stack
-
-### Core Technologies
-- **React 19** - UI library with hooks
-- **React Router** - Client-side routing
-- **CSS Modules** - Scoped component styling
-- **JavaScript ES6+** - Modern JavaScript features
-
-### Development Tools
-- **Vite** - Build tooling and configuration
-- **Git** - Version control
-- **npm** - Package management
-
-### Future Additions
-- TypeScript (planned)
-- React Testing Library (planned)
-- ESLint & Prettier (planned)
-
-**⭐ If you found this project helpful, please consider giving it a star!**
-
-## 📂 Project Architecture
-
-Available in the source code
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
