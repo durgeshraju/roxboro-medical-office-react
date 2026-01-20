@@ -1,0 +1,140 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 9999px;
+  border: 1px solid transparent;
+
+  font-weight: 400;
+  line-height: 1;
+  cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+
+  transition: transform 0.06s ease, box-shadow 0.15s ease, background 0.15s ease,
+    border-color 0.15s ease, opacity 0.15s ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Sizes */
+.size_sm {
+  padding: 8px 12px;
+  font-size: 13px;
+}
+
+.size_md {
+  padding: 10px 16px;
+  font-size: 14px;
+}
+
+.size_lg {
+  padding: 12px 18px;
+  font-size: 15px;
+}
+
+/* Variants (adjust colors to your brand) */
+.variant_primary {
+  background: #0f4b44;
+  color: #ffffff;
+}
+
+.variant_primary:hover {
+  box-shadow: 0 8px 18px rgba(15, 75, 68, 0.18);
+}
+
+.variant_secondary {
+  background: #e9f5f1;
+  color: #0f4b44;
+  border-color: #cfe6df;
+}
+
+.variant_secondary:hover {
+  box-shadow: 0 8px 18px rgba(15, 75, 68, 0.12);
+}
+
+.variant_outline {
+  background: transparent;
+  color: #0f4b44;
+  border-color: #0f4b44;
+}
+
+.variant_outline:hover {
+  background: rgba(15, 75, 68, 0.06);
+}
+
+.variant_ghost {
+  background: transparent;
+  color: #0f4b44;
+}
+
+.variant_ghost:hover {
+  background: rgba(15, 75, 68, 0.06);
+}
+
+.variant_danger {
+  background: #b42318;
+  color: #ffffff;
+}
+
+.variant_danger:hover {
+  box-shadow: 0 8px 18px rgba(180, 35, 24, 0.18);
+}
+
+/* Loading */
+.loading {
+  position: relative;
+}
+
+.spinner {
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-top-color: #ffffff;
+  animation: spin 0.8s linear infinite;
+}
+
+.variant_secondary .spinner,
+.variant_outline .spinner,
+.variant_ghost .spinner {
+  border: 2px solid rgba(15, 75, 68, 0.25);
+  border-top-color: #0f4b44;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Icons */
+.iconLeft,
+.iconRight {
+  display: inline-flex;
+  align-items: center;
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+}
+
+/*Custom class for the right icon we use for the spacings etc..*/
+.iconRight{
+
+}
