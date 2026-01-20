@@ -48,6 +48,7 @@ textarea,
 select {
   font: inherit;
   color: inherit;
+  border: 0 none;
 }
 
 /* Ensure buttons and inputs are clickable */
@@ -56,6 +57,7 @@ button,
 [type="submit"],
 [type="reset"] {
   cursor: pointer;
+  border: 0 none;
 }
 
 /* Respect user prefers-reduced-motion setting */
