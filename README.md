@@ -36,13 +36,13 @@ A comprehensive medical office leasing platform featuring property listings, int
 ## 🛠️ Tech Stack
 
 ### Core Technologies
-- **React 18** - UI library with hooks
-- **React Router v6** - Client-side routing
+- **React 19** - UI library with hooks
+- **React Router** - Client-side routing
 - **CSS Modules** - Scoped component styling
 - **JavaScript ES6+** - Modern JavaScript features
 
 ### Development Tools
-- **Create React App** - Build tooling and configuration
+- **Vite** - Build tooling and configuration
 - **Git** - Version control
 - **npm** - Package management
 
@@ -51,123 +51,8 @@ A comprehensive medical office leasing platform featuring property listings, int
 - React Testing Library (planned)
 - ESLint & Prettier (planned)
 
+**⭐ If you found this project helpful, please consider giving it a star!**
+
 ## 📂 Project Architecture
 
-roxboro-medical-office-react/
-├── src/
-│   ├── components/
-│   │   ├── common/                    # Reusable UI components
-│   │   │   ├── Button/
-│   │   │   │   ├── Button.jsx
-│   │   │   │   └── Button.module.css
-│   │   │   ├── Input/
-│   │   │   │   ├── Input.jsx
-│   │   │   │   └── Input.module.css
-│   │   │   ├── Card/
-│   │   │   │   ├── Card.jsx
-│   │   │   │   └── Card.module.css
-│   │   │   └── Badge/
-│   │   │       ├── Badge.jsx          # "NOW LEASING" badge
-│   │   │       └── Badge.module.css
-│   │   │
-│   │   ├── layout/                     # Layout components
-│   │   │   ├── Header/
-│   │   │   │   ├── Header.jsx
-│   │   │   │   ├── Navigation.jsx
-│   │   │   │   └── Header.module.css
-│   │   │   ├── Footer/
-│   │   │   │   ├── Footer.jsx
-│   │   │   │   └── Footer.module.css
-│   │   │   └── Layout.jsx              # Wrapper for all pages
-│   │   │
-│   │   └── features/                   # Feature-specific components
-│   │       ├── TourForm/
-│   │       │   ├── TourForm.jsx        # Schedule tour form
-│   │       │   └── TourForm.module.css
-│   │       ├── LeaseCard/
-│   │       │   ├── LeaseCard.jsx       # Lease details card
-│   │       │   └── LeaseCard.module.css
-│   │       ├── PropertyFeatures/
-│   │       │   ├── FeatureGrid.jsx     # 4-card grid
-│   │       │   ├── FeatureCard.jsx
-│   │       │   └── Features.module.css
-│   │       ├── ContactForm/
-│   │       │   ├── ContactForm.jsx     # Full contact form
-│   │       │   └── ContactForm.module.css
-│   │       ├── FAQ/
-│   │       │   ├── FAQSection.jsx      # Accordion
-│   │       │   ├── FAQItem.jsx
-│   │       │   └── FAQ.module.css
-│   │       └── ProximityList/
-│   │           ├── ProximityList.jsx   # Nearby locations
-│   │           └── ProximityList.module.css
-│   │
-│   ├── pages/                          # Page-level components
-│   │   ├── Home/
-│   │   │   ├── Home.jsx
-│   │   │   ├── sections/
-│   │   │   │   ├── HeroSection.jsx
-│   │   │   │   ├── InfoSection.jsx
-│   │   │   │   ├── LeaseSection.jsx
-│   │   │   │   ├── FeaturesSection.jsx
-│   │   │   │   └── CTASection.jsx
-│   │   │   └── Home.module.css
-│   │   │
-│   │   ├── PropertyDetail/
-│   │   │   ├── PropertyDetail.jsx
-│   │   │   ├── sections/
-│   │   │   │   ├── PropertyHero.jsx
-│   │   │   │   ├── AboutProperty.jsx
-│   │   │   │   ├── LeasingSummary.jsx
-│   │   │   │   ├── Neighborhood.jsx
-│   │   │   │   └── FAQSection.jsx
-│   │   │   └── PropertyDetail.module.css
-│   │   │
-│   │   └── Contact/
-│   │       ├── Contact.jsx
-│   │       ├── sections/
-│   │       │   ├── ContactHero.jsx
-│   │       │   ├── InquiryForm.jsx
-│   │       │   └── DirectionsMap.jsx
-│   │       └── Contact.module.css
-│   │
-│   ├── hooks/                          # Custom hooks
-│   │   ├── useForm.js                  # Form validation logic
-│   │   ├── useToggle.js                # FAQ accordion toggle
-│   │   └── useScrollToTop.js           # Route change scroll
-│   │
-│   ├── services/                       # API/Services
-│   │   ├── emailService.js             # Send tour requests
-│   │   └── api.js                      # API configuration
-│   │
-│   ├── utils/                          # Utilities
-│   │   ├── validation.js               # Email, phone validation
-│   │   ├── constants.js                # Site constants
-│   │   └── helpers.js                  # Helper functions
-│   │
-│   ├── data/                           # Static data
-│   │   ├── propertyData.js             # Property details
-│   │   ├── featuresData.js             # Medical features
-│   │   ├── faqData.js                  # FAQ questions
-│   │   └── proximityData.js            # Nearby locations
-│   │
-│   ├── styles/                         # Global styles
-│   │   ├── variables.css               # CSS variables
-│   │   ├── global.css                  # Global styles
-│   │   └── utilities.css               # Utility classes
-│   │
-│   ├── routes/
-│   │   └── AppRoutes.jsx               # Route definitions
-│   │
-│   ├── App.jsx
-│   ├── index.js
-│   └── index.css
-│
-├── public/
-│   ├── images/
-│   │   ├── hero-building.jpg
-│   │   ├── property-interior.jpg
-│   │   └── logo.png
-│   └── index.html
-│
-└── package.json
+Can if in the source code
