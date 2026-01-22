@@ -27,7 +27,10 @@ p {
   padding-bottom: 20px;
 }
 
+/*Global Contanier*/
 
-#root{
-  padding: 20px;
+.container {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: clamp(16px, 3vw, 24px);
 }
