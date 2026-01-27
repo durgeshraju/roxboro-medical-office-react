@@ -1,13 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-const Navigation = () => {
+import Button from '../../../components/common/Button/Button';
+import styles from '../Header.module.css';
+
+const Navigation = ({isOpen = false}) => {
+    const navClasses = [
+    styles.nav,
+    isOpen ? styles['is-open'] : ''
+    ].filter(Boolean).join(' ');
+    
     return (
         <>
-            <h1>Navigation</h1>
-            <Link to="/">Home</Link>
-            <Link to="/gallery">Gallery</Link>
-            <Link to="/about">About</Link>
-            <Link to="/contact">Contact</Link>
+        <nav id="primary-nav" className={navClasses}>
+            <ul className={styles.nav__list}>
+                <li><Link className={styles.nav__link} to="/">Home</Link></li>
+                <li><Link className={styles.nav__link} to="/gallery">Gallery</Link></li>                    
+                <li><Link className={styles.nav__link} to="/about">About</Link></li>
+                <li className="nav__cta">
+                 <Button to="/contact" as={Link} rightIcon size="md">Contact Us</Button>
+                </li>        
+            </ul>      
+        </nav>          
         </>
     )
 }

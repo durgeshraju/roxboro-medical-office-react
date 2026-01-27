@@ -16,7 +16,7 @@
 
 .brand__logo {
   display: block;
-  width: 340px;
+  width: min(340px, 100%);
   height: auto;
   aspect-ratio: 11 / 2;
   object-fit: contain;
@@ -24,6 +24,212 @@
 
 @media (max-width: 600px) {
   .brand__logo {
-    width: 285px;
+    width: min(285px, 100%);
   }
+}
+
+/* ===== Nav (desktop) ===== */
+.nav {
+  justify-self: end;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;  
+  gap: clamp(32px, 4vw, 64px); /* increased spacing */
+}
+
+/* Base nav link */
+.nav__link {
+  position: relative;
+  display: inline-block;
+  padding: 10px 0;
+  font-family: 'Chivo', sans-serif;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Create underline (hidden by default) */
+.nav__link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+  transition:
+    width 0.3s ease,
+    left 0.3s ease;
+}
+
+/* On hover — line expands smoothly from center */
+.nav__link:hover::after,
+.nav__link:focus-visible::after {
+  width: 36px;    /* same as your active underline width */
+  left: calc(50% - 18px);
+}
+
+/* Active page link stays underlined */
+.nav__link.is-active::after {
+  width: 36px;
+  left: calc(50% - 18px);
+}
+/* ===== CTA button ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: var(--radius-pill);
+  font-family: 'Chivo', system-ui, sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  transition: transform .15s ease, box-shadow .15s ease, opacity .2s ease;
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background: var(--btn);
+  color: var(--btn-ink);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition:
+    background-color 0.3s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    color 0.25s ease;
+}
+
+.btn--primary:hover {
+  background-color: #2a6667; /* slightly lighter teal on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn--primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Font Awesome arrow styling */
+.btn--primary i {
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+
+/* Slide arrow smoothly on hover */
+.btn--primary:hover i {
+  transform: translateX(5px);
+}
+
+
+/* ===== Mobile nav toggle (hamburger) ===== */
+.nav-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.nav-toggle__bar {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  height: 2px;
+  background: var(--ink);
+  transition: transform .2s ease, opacity .2s ease, top .2s ease;
+}
+.nav-toggle__bar:nth-child(2) { top: 12px; }
+.nav-toggle__bar:nth-child(3) { top: 20px; }
+.nav-toggle__bar:nth-child(4) { top: 28px; }
+
+/* When menu is open, animate to an X */
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(2) {
+  top: 20px; transform: rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(3) {
+  opacity: 0;
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(4) {
+  top: 20px; transform: rotate(-45deg);
+}
+
+/* ===== Responsive (mobile-first adjustments) ===== */
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr auto;
+    gap: 0;
+  }      
+  .nav { display: none; }
+  .nav-toggle { display: inline-block; justify-self: end; }
+
+  /* Mobile menu panel */
+    .nav.is-open {
+    display: block;
+    position: fixed;
+    inset: 0; /* top:0; right:0; bottom:0; left:0 */
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    padding: clamp(24px, 6vw, 40px);
+    z-index: 1000;
+    overflow-y: auto;
+  }
+
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    padding-top: 0;
+  }
+
+  .nav__link {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--ink);
+    width: 100%;
+  }
+
+  /* Show Contact button inside mobile menu */
+  .nav__cta {
+    display: block;
+    width: 100%;
+    margin-top: 22px;
+  }
+
+  .nav__cta .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 16px 20px;
+    font-size: 1rem;
+  }
+  .nav-toggle {
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    z-index: 1101;
+    border-radius: 5px;
+  }
+}
+
+/* ===== Sticky Header ===== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background: #f4f6f5;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Optional: Add subtle shadow when scrolling */
+body.scrolled .site-header {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background-color: #e0f1f1;
+  border-bottom: 1px solid #91aeae;
 }

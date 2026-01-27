@@ -4,4 +4,16 @@
 
 :root {
     --container-max: 1440px;
+    --grid-columns: 12;
+    --grid-gap: clamp(16px, 3vw, 28px);
+    --grid-gap-sm: 12px;
+    --grid-gap-lg: clamp(24px, 4vw, 40px);
+    --bg: #f6f9f8;
+    --ink: #214e4f;
+    --ink-muted:#2b5b5c;
+    --accent:#ff8a3d;
+    --btn:#214e4f;
+    --btn-ink:#ffffff;
+    --ring: #dbe7e7;
+    --radius-pill: 999px;
 }
