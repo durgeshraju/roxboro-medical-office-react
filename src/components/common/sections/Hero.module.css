@@ -1,0 +1,40 @@
+/* ===== Hero ===== */
+.hero {
+  position: relative;
+  width: 100%;  
+  --hero-min: 400px;     
+  --hero-ideal: 65vh;
+  --hero-max: 700px;
+  height: clamp(var(--hero-min), var(--hero-ideal), var(--hero-max));  
+}
+/* phone-only overrides */
+@media (max-width: 640px){
+  .hero{
+    /* shorter target and svh to avoid iOS URL bar jump */
+    --hero-min: 280px;
+    --hero-ideal: 0;
+    --hero-max: 520px;
+  }
+}
+
+.hero__media,
+.hero picture {
+  display: block;
+  width: 100%;  
+  max-width: none;
+}
+
+@media (min-width: 1024px) {
+  .hero__media, .hero picture {
+          height: 100%;
+  }
+}
+
+.hero__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: 50% 40%;
+}
